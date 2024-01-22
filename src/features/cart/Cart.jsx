@@ -9,6 +9,7 @@ function Cart() {
   const username = useSelector((state) => state.user.username);
 
   const cart = useSelector(getCart);
+  console.log(cart);
   const dispatch = useDispatch();
 
   function handleClearCart() {
@@ -25,7 +26,7 @@ function Cart() {
       <h2 className="mt-7 text-xl font-semibold">Your cart, {username}</h2>
       <ul className="divide-y-2 divide-stone-200 border-b">
         {cart.map((pizza) => (
-          <CartItem item={pizza} key={pizza.id} />
+          <CartItem item={pizza} key={pizza.pizzaId} />
         ))}
       </ul>
       <div className="mt-6 space-x-2">
