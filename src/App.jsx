@@ -12,6 +12,7 @@ import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
 const router = createBrowserRouter([
   {
+    basename: '/',
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
