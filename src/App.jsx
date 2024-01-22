@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Link, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './ui/Home';
 
 import Menu, { loader as menuLoader } from './features/menu/Menu';
@@ -47,6 +47,7 @@ const router = createBrowserRouter(
   ],
   { basename: '/' },
 );
+<Link to="/" />;
 
 function App() {
   return <RouterProvider router={router} />;
